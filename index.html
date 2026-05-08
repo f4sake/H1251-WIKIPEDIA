@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>H1251 WIKI</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: white;
+    color: #5a0000;
+  }
+
+  header {
+    background: white;
+    color: #5a0000;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a0000;
+  }
+
+  .container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .menu {
+    width: 30%;
+  }
+
+  .category {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid #5a0000;
+    font-weight: bold;
+    color: #5a0000;
+  }
+
+  .list {
+    display: none;
+    margin-bottom: 15px;
+  }
+
+  .item {
+    padding: 8px;
+    margin: 5px 0;
+    background: #fff5f5;
+    cursor: pointer;
+    border: 1px solid #5a0000;
+    color: #5a0000;
+  }
+
+  .item:hover {
+    background: #ffe1e1;
+  }
+
+  .content {
+    width: 70%;
+    background: white;
+    padding: 20px;
+    border: 2px solid #5a0000;
+    min-height: 400px;
+  }
+
+  .content img {
+    width: 48%;
+    margin-right: 2%;
+    border: 1px solid #5a0000;
+  }
+
+  .image-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-row img {
+  width: 55%;
+  height: 370px;
+  object-fit: cover;
+  border: 1px solid #5a0000;
+}
+  .hidden {
+    display: none;
+  }
+
+  h2 {
+    color: #5a0000;
+  }
+
+  p {
+    color: #5a0000;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  H1251 WIKI
+</header>
+
+<div class="container">
+
+  <!-- МЕНЮ -->
+  <div class="menu">
+
+    <div class="category" onclick="toggle('charList')">ПЕРСОНАЖИ</div>
+    <div id="charList" class="list">
+      <div class="item" onclick="openPage('char1')">Яковенко Матвей</div>
+      <div class="item" onclick="openPage('char2')">Денис П.</div>
+      <div class="item" onclick="openPage('char3')">Ярик Топоров</div>
+      <div class="item" onclick="openPage('char4')">Олег</div>
+      <div class="item" onclick="openPage('char5')">Матвей П.</div>
+      <div class="item" onclick="openPage('char6')">ЧИСТО Я</div>
+      <div class="item" onclick="openPage('char7')">Лехманн</div>
+      <div class="item" onclick="openPage('char8')">Феликс Ф.</div>
+      <div class="item" onclick="openPage('char9')">Абдивалиус</div>
+      <div class="item" onclick="openPage('char10')">Mr. Pfanne</div>
+    </div>
+
+    <div class="category" onclick="toggle('eventList')">СОБЫТИЯ</div>
+    <div id="eventList" class="list">
+      <div class="item" onclick="openPage('event1')">Жирный падающий член</div>
+      <div class="item" onclick="openPage('event2')">Первое появление Орёгу Степаньеку</div>
+      <div class="item" onclick="openPage('event3')">Изнасилование Ель Путы</div>
+      <div class="item" onclick="openPage('event4')">Событие 4</div>
+      <div class="item" onclick="openPage('event5')">Событие 5</div>
+      <div class="item" onclick="openPage('event6')">Событие 6</div>
+    </div>
+
+    <div class="category" onclick="toggle('itemList')">ПРЕДМЕТЫ</div>
+    <div id="itemList" class="list">
+      <div class="item" onclick="openPage('item1')">Предмет 1</div>
+      <div class="item" onclick="openPage('item2')">Предмет 2</div>
+      <div class="item" onclick="openPage('item3')">Предмет 3</div>
+      <div class="item" onclick="openPage('item4')">Предмет 4</div>
+      <div class="item" onclick="openPage('item5')">Предмет 5</div>
+      <div class="item" onclick="openPage('item6')">Предмет 6</div>
+      <div class="item" onclick="openPage('item7')">Предмет 7</div>
+      <div class="item" onclick="openPage('item8')">Предмет 8</div>
+    </div>
+
+  </div>
+
+  <!-- КОНТЕНТ -->
+  <div class="content">
+
+    <div id="home">
+      <h2>Выбери раздел слева</h2>
+    </div>
+
+    <!-- ШАБЛОН ПЕРСОНАЖА -->
+    <div id="char1" class="hidden">
+      <h2>Яковенко Матвей</h2>
+       <div class="image-row">
+  <img src="https://cdn.phototourl.com/free/2026-05-07-253a6470-e02c-4928-8499-d0bd697ce291.jpg">
+  <img src="https://cdn.phototourl.com/free/2026-05-07-8d6adf93-a119-4ec3-a238-47bc80fa6624.jpg">
+</div>
+      <p>Описание персонажа...</p>
+    </div>
+
+    <div id="char2" class="hidden">
+      <h2>Денис П.</h2>
+      <div class="image-row">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-06f621a7-7e45-45ae-a26b-244ccef02e72.jpg">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-2f91d3b5-1033-4515-9e7d-3965d8e91c03.jpg">
+      </div>
+        <p>Описание персонажа...</p>
+    </div>
+
+    <div id="char3" class="hidden">
+      <h2>Ярик Топоров</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-8cc96b23-2fcc-4136-b54a-9fe864e01735.jpg">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-60a643ec-0a85-4376-a56e-ef93b7ca263f.jpg">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+       <div id="char4" class="hidden">
+      <h2>Олег</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-abd72fdd-f6c1-4fac-ad12-7e155c1fd342.jpg">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-512650e1-98f6-4189-bd4a-69ccc4016c83.jpg">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+       <div id="char5" class="hidden">
+      <h2>Матвей П.</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-4efb4164-aa24-4061-8e30-dae7ec856775.jpg">
+      <img src="https://cdn.phototourl.com/free/2026-05-07-aa829812-fc6b-4dbe-8046-e41ebed2e0fe.jpg">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+      <div id="char6" class="hidden">
+      <h2>ЧИСТО Я</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-feecbc37-bff6-4843-b812-02af6cd5a199.jpg">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-b44191f9-38bf-4fe5-8eb8-9924bae9bb4c.jpg">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+      <div id="char7" class="hidden">
+      <h2>Лехманн</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-1b881230-8052-449c-8e13-88dcd45456af.jpg">
+      <im src="">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+      <div id="char8" class="hidden">
+      <h2>Феликс Ф.</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-5546dc72-07b6-478c-888c-7ac3ea224875.jpg">
+      <im src="">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+         <div id="char9" class="hidden">
+      <h2>Абдивалиус</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-37e4fb98-7c09-49fd-b501-71f31ddfb069.jpg">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-f48fd8db-306f-4c75-a738-5fe485370c47.jpg">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+
+      <div id="char10" class="hidden">
+      <h2>Mr. Pfanne</h2>
+       <div class="image-row">
+      <img src="https://cdn.phototourl.com/member/2026-05-07-599ee813-f29a-4edd-8c1c-314706b788b6.jpg">
+      <im src="">
+      </div>
+         <p>Описание персонажа...</p>
+    </div>
+    
+    <!-- СОБЫТИЯ -->
+    <div id="event1" class="hidden">
+      <h2>Жирный падающий член</h2>
+      <img src="https://cdn.phototourl.com/member/2026-05-07-8fb9a9b6-2947-4b0d-ac08-6749543216ca.jpg"
+      </div>
+        <p>Описание события...</p>
+    </div>
+
+  <div id="event2" class="hidden">
+      <h2>Первое появление Орёгу Степаньеку</h2>
+      <img src="https://s10.iimage.su/s/07/th_gTsrsgsxYpiqgwmNUsbYBzevBOPUAKHs5rtLQflgT.jpg"
+      </div>
+        <p>Описание события...</p>
+    </div>
+
+    <div id="event3" class="hidden">
+      <h2>Изнасилование Ель Путы</h2>
+      <img src="https://s10.iimage.su/s/07/th_gStYdx3xYKnQubhBgi3phDngsgddEjeYruVQQFRwv.jpg"
+      </div>
+        <p>Описание события...</p>
+
+  
+    <!-- ПРЕДМЕТЫ -->
+    <div id="item1" class="hidden">
+      <h2>Предмет</h2>
+      <img src="URL_ФОТО1">
+      <img src="URL_ФОТО2">
+      <p>Описание предмета...</p>
+    </div>
+
+
+<script>
+function toggle(id) {
+  let el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+
+function openPage(id) {
+  document.querySelectorAll('.content > div').forEach(el => el.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
